@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Payment</title>
+</head>
+<body>
+<h1>Payment Form</h1>
+<form action="#" th:action="@{/processPayment}" th:object="${bookingRequest}" method="post">
+  <p>Amount: <span th:text="${bookingRequest.amount}"></span></p>
+  <p>Payment Type: <span th:text="${bookingRequest.paymentType}"></span></p>
+
+  <input type="submit" value="Pay Now" />
+</form>
+</body>
+</html>
