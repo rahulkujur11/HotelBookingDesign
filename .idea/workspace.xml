@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a3f4af6-d8e1-490e-babf-a50e7d64031a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Controllers/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Controllers/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/HotelBookingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/HotelBookingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/HotelbookingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/HotelBookingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Repository/BookingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Repository/BookingRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/PaymentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/HotelBookingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/HotelBookingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/HotelbookingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/HotelbookingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/BookingStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/BookingStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Hotel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/RoomType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/RoomType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Notifications/Observable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Notifications/Observable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Notifications/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Notifications/Observer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/CreditCardPaymentStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/CreditCardPaymentStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PayPalPaymentStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PayPalPaymentStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PaymentFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PaymentFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PaymentStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PaymentStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PaymentStrategyFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PaymentStrategyFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Repository/BookingRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Repository/BookingRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/BookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/HotelManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/HotelManagementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/NotificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/NotificationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/SearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/SearchService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2kNxxF1GqOB2pbWQZIwfQZdRyae" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Study Material/hotelbooking/src/main/resources/static/image",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "spring.configuration.checksum": "66dcd17246278ac88007d124a9338187",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study Material\hotelbooking\src\main\resources\static\image" />
+      <recent name="D:\Study Material\hotelbooking" />
+      <recent name="D:\Study Material\hotelbooking\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Study Material\hotelbooking\src\main\resources\static\image" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HotelBookingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-22" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="hotelbooking" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.hotelbooking.HotelBookingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a3f4af6-d8e1-490e-babf-a50e7d64031a" name="Changes" comment="" />
+      <created>1723138081164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723138081164</updated>
+      <workItem from="1723138082374" duration="653000" />
+      <workItem from="1723138757603" duration="64000" />
+      <workItem from="1723138946673" duration="328000" />
+      <workItem from="1723139283772" duration="370000" />
+      <workItem from="1723151206851" duration="10338000" />
+      <workItem from="1723292738115" duration="171000" />
+      <workItem from="1723292913238" duration="281000" />
+      <workItem from="1723293198427" duration="78000" />
+      <workItem from="1723293278796" duration="27000" />
+      <workItem from="1723293313256" duration="159000" />
+      <workItem from="1723293510519" duration="2673000" />
+      <workItem from="1723478697541" duration="129000" />
+      <workItem from="1723478898829" duration="75000" />
+      <workItem from="1723479098997" duration="18000" />
+      <workItem from="1723479165178" duration="1364000" />
+      <workItem from="1723561567348" duration="1551000" />
+      <workItem from="1723620927324" duration="38000" />
+      <workItem from="1723621236208" duration="1280000" />
+      <workItem from="1723815725079" duration="461000" />
+      <workItem from="1724585973270" duration="8137000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -52,6 +52,7 @@ public class BookingRequest {
 
     public String getPaymentType() {
         return paymentType;
+
     }
 
     public void setPaymentType(String paymentType) {

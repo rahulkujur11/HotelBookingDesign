@@ -19,17 +19,25 @@ import java.util.ArrayList;
 @Controller
 public class BookingController {
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String showForm(Model model) {
         BookingRequest bookingRequest = new BookingRequest();
         model.addAttribute("bookingRequest", bookingRequest);
         return "index"; // This maps to src/main/resources/templates/index.htm
     }
 
+    @GetMapping("/bookform")
+    public String showBookingPage(Model model) {
+        BookingRequest bookingRequest = new BookingRequest();
+        model.addAttribute("bookingRequest", bookingRequest);
+        return "bookform";  // Return the name of the template (e.g., booking.html)
+    }
+
+
     @PostMapping("/book")
     public String processBooking(@ModelAttribute BookingRequest bookingRequest, Model model) {
         // Create dummy user and hotel for simplicity
-        User user = new User("user1", bookingRequest.getUserName(), bookingRequest.getEmail(), "1234567890", new ArrayList<>());
+        User user = new User("user1", bookingRequest.getUserName(), bookingRequest.getEmail(),"1234567890", new ArrayList<>());
         Hotel hotel = new Hotel("hotel1", bookingRequest.getHotelName(), "California", new ArrayList<>(), new ArrayList<>());
         Room room = new Room("room1", RoomType.DOUBLE, 200.00, true);
         hotel.getRooms().add(room);

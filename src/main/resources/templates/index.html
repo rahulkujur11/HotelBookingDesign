@@ -1,33 +1,217 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>Hotel Booking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 10px;
+            display: flex;
+            justify-content: space-between; /* Space between title and profile/login */
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .profile-login {
+            font-size: 1em;
+            background-color: white;
+            color: #4CAF50;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .profile-login:hover {
+            background-color: #45a049;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-bar input[type="text"] {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .hotel-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px; /* Add gap between items */
+        }
+        .hotel-item {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 30%; /* Ensure three items per row on large screens */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .hotel-item:hover {
+            transform: scale(1.02);
+        }
+        .hotel-item img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .hotel-info {
+            padding: 15px;
+            flex-grow: 1; /* Make sure content area grows to fill available space */
+        }
+        .hotel-info h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .hotel-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .rating {
+            color: #FFD700;
+        }
+        .book-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .book-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hotel-item {
+                max-width: 48%; /* Two items per row on medium screens */
+            }
+        }
+        @media (max-width: 768px) {
+            .hotel-item {
+                max-width: 100%; /* One item per row on small screens */
+            }
+            .search-bar input[type="text"] {
+                width: 100%; /* Make search bar full width */
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hotel Booking Form</h1>
-    <form action="#" th:action="@{/book}" th:object="${bookingRequest}" method="post">
-        <label for="userName">Name:</label>
-        <input type="text" id="userName" th:field="*{userName}" required /><br/>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" th:field="*{email}" required /><br/>
+<header>
+    <h1>Hotel Booking App</h1>
+    <a href="/loginform" class="profile-login">Login</a> <!-- Change to "Profile" when logged in -->
+</header>
 
-        <label for="hotelName">Hotel Name:</label>
-        <input type="text" id="hotelName" th:field="*{hotelName}" required /><br/>
+<div class="container">
 
-        <label for="checkInDate">Check-in Date:</label>
-        <input type="date" id="checkInDate" th:field="*{checkInDate}" required /><br/>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for hotels..." />
+    </div>
 
-        <label for="checkOutDate">Check-out Date:</label>
-        <input type="date" id="checkOutDate" th:field="*{checkOutDate}" required /><br/>
+    <div class="hotel-list">
 
-        <label for="paymentType">Payment Type:</label>
-        <select id="paymentType" th:field="*{paymentType}">
-            <option value="CREDIT_CARD">Credit Card</option>
-            <option value="PAYPAL">PayPal</option>
-        </select><br/>
+        <!-- Hotel Item 1 -->
+        <div class="hotel-item">
+            <img src="/image/hotel1.webp" alt="Hotel 1">
+            <div class="hotel-info">
+                <h2>Luxury Resort</h2>
+                <p>Location: Maldives</p>
+                <p class="rating">Rating: ★★★★☆</p>
+            </div>
+            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
+        </div>
 
-        <input type="submit" value="Book Now" />
-    </form>
+        <!-- Hotel Item 2 -->
+        <div class="hotel-item">
+            <img src="/image/hotel2.webp" alt="Hotel 2">
+            <div class="hotel-info">
+                <h2>Mountain Lodge</h2>
+                <p>Location: Swiss Alps</p>
+                <p class="rating">Rating: ★★★★★</p>
+            </div>
+            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
+        </div>
+
+        <!-- Hotel Item 3 -->
+        <div class="hotel-item">
+            <img src="/image/hotel3.webp" alt="Hotel 3">
+            <div class="hotel-info">
+                <h2>City Hotel</h2>
+                <p>Location: New York City</p>
+                <p class="rating">Rating: ★★★☆☆</p>
+            </div>
+            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
+        </div>
+
+        <!-- Hotel Item 4 -->
+        <div class="hotel-item">
+            <img src="/image/hotel4.webp" alt="Hotel 4">
+            <div class="hotel-info">
+                <h2>City Hotel</h2>
+                <p>Location: New York City</p>
+                <p class="rating">Rating: ★★★☆☆</p>
+            </div>
+            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
+        </div>
+
+        <!-- Hotel Item 5 -->
+        <div class="hotel-item">
+            <img src="/image/hotel5.webp" alt="Hotel 5">
+            <div class="hotel-info">
+                <h2>City Hotel</h2>
+                <p>Location: New York City</p>
+                <p class="rating">Rating: ★★★☆☆</p>
+            </div>
+            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
+        </div>
+
+        <!-- Hotel Item 6 -->
+        <div class="hotel-item">
+            <img src="/image/hotel6.webp" alt="Hotel 6">
+            <div class="hotel-info">
+                <h2>City Hotel</h2>
+                <p>Location: New York City</p>
+                <p class="rating">Rating: ★★★☆☆</p>
+            </div>
+            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
+        </div>
+
+    </div>
+</div>
+
 </body>
 </html>

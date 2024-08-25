@@ -8,6 +8,9 @@ public class User {
     private String name;
     private String email;
     private String phone;
+
+
+    private String password;
     private List<Booking> bookings;
 
     public User(String userId, String name, String email, String phone, List<Booking> bookings) {
@@ -24,6 +27,14 @@ public class User {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getName() {
