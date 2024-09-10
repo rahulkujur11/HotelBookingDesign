@@ -1,26 +1,42 @@
 package com.project.hotelbooking.Models;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Room {
-    private String roomId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-increment primary key
+    private Long roomId;
+
+    @Enumerated(EnumType.STRING)
     private RoomType roomType;
+
     private double pricePerNight;
+
     private boolean isAvailable;
 
-    // Constructors, getters, setters
+    @ManyToOne
+    @JoinColumn(name = "hotelId", nullable = false)
+    private Hotel hotel; // Many rooms can belong to one hotel
 
+    // Constructors, getters, and setters
+    public Room() {}
 
-    public Room(String roomId, RoomType roomType, double pricePerNight, boolean isAvailable) {
-        this.roomId = roomId;
+    public Room(RoomType roomType, double pricePerNight, boolean isAvailable, Hotel hotel) {
         this.roomType = roomType;
         this.pricePerNight = pricePerNight;
         this.isAvailable = isAvailable;
+        this.hotel = hotel;
     }
 
-    public String getRoomId() {
+    // Getters and setters...
+
+    public Long getRoomId() {
         return roomId;
     }
 
-    public void setRoomId(String roomId) {
+    public void setRoomId(Long roomId) {
         this.roomId = roomId;
     }
 
@@ -47,5 +63,12 @@ public class Room {
     public void setAvailable(boolean available) {
         isAvailable = available;
     }
-}
 
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+}

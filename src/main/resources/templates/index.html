@@ -3,249 +3,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Booking App</title>
+    <title>Hotel Booking App - Airbnb Style</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            padding-top: 160px; /* Adjust this value to accommodate the fixed header, search bar, and filter bar */
+            background-color: White;
         }
+
+        /* Header Section */
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 10px;
             display: flex;
-            justify-content: space-between; /* Space between title and profile/login */
+            justify-content: space-between;
             align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        .profile-login {
-            font-size: 1em;
-            background-color: white;
-            color: #4CAF50;
-            padding: 8px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .profile-login:hover {
-            background-color: #45a049;
-            color: white;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-        .search-bar {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .search-bar input[type="text"] {
-            width: 100%;
-            max-width: 600px;
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Make the header fixed */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ensure the header takes full width */
+            z-index: 1000; /* Keep the header above other elements */
         }
+
+        header img {
+            width: 120px;
+            margin-left: 85px;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            width: 25px; /* Adjust the size of the profile image */
+            height: 25px;
+            border-radius: 50%; /* Make the image round */
+            object-fit: cover; /* Ensure the image fits nicely inside the circle */
+            cursor: pointer; /* Make the image clickable */
+            margin-right: 85px; /* Add some space from the right edge */
+        }
+
+        /* Hover effect for Profile Image */
+        .profile-image:hover {
+            transform: scale(1.1); /* Slightly enlarges the image */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0); /* Adds shadow effect */
+        }
+
+
+        .profile-login {
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-right: 25px; /* Ensure some margin from the right edge */
+        }
+
+        .search-bar {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 1280px;
+            position: fixed;
+            top: 75px;
+            left: 0;
+            right: 0;
+            z-index: 999; /* Ensure the search bar is on top */
+        }
+
+        /* Input fields in search bar */
+        .search-bar input, .search-bar select {
+            padding: 10px;
+            border: 1px solid #039492;
+            border-radius: 5px;
+            font-size: 1em;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        /* Input fields in search bar */
+        .search-bar input::placeholder {
+            color: #039492; /* Apply the #039492 color to the placeholder */
+            opacity: 1; /* Ensure full opacity */
+        }
+
+        .search-bar select {
+            padding: 10px;
+            border: 1px solid #039492;
+            border-radius: 5px;
+            font-size: 1em;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        /* Optionally, if you want to style the select placeholder (first option) */
+        .search-bar select option:first-child {
+            color: #039492; /* Color for the first option in the select dropdown */
+        }
+
+        /* Search Image */
+        .search-image {
+            width: 25px; /* Adjust the size of the search image */
+            height: 25px;
+            cursor: pointer; /* Make the image clickable */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* Hover effect for Search Image */
+        .search-image:hover {
+            transform: scale(1.1); /* Slightly enlarges the image on hover */
+        }
+
+
+        /* Filter Bar */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 10px auto;
+            max-width: 1200px;
+            position: fixed;
+            top: 160px; /* Adjust to sit below the search bar */
+            left: 0;
+            right: 0;
+            z-index: 998;
+            background-color: white;
+            padding: 10px 0; /* Add padding to the filter bar */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-bar div {
+            text-align: center;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .filter-bar div img {
+            width: 30px;
+            margin-bottom: 5px;
+        }
+
+        /* Hotel List */
         .hotel-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 20px; /* Add gap between items */
+            gap: 20px;
+            max-width: 1300px;
+            margin: 20px auto;
         }
+
         .hotel-item {
             background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-            max-width: 30%; /* Ensure three items per row on large screens */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-            display: flex;
-            flex-direction: column;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            text-decoration: none; /* Remove underline */
+            color: black; /* Ensure text color is correct */
         }
-        .hotel-item:hover {
-            transform: scale(1.02);
-        }
+
         .hotel-item img {
             width: 100%;
-            height: auto;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
+            height: 200px;
+            object-fit: cover;
         }
+
         .hotel-info {
             padding: 15px;
-            flex-grow: 1; /* Make sure content area grows to fill available space */
         }
+
         .hotel-info h2 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #333;
         }
+
         .hotel-info p {
+            color: #666;
             margin: 5px 0;
+        }
+
+        .hotel-info .price {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hotel-info .rating {
             color: #666;
         }
-        .rating {
-            color: #FFD700;
-        }
-        .book-button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .book-button:hover {
-            background-color: #45a049;
+
+        .hotel-item:hover {
+            transform: scale(1.05);
         }
 
         /* Responsive Styles */
-        @media (max-width: 1024px) {
-            .hotel-item {
-                max-width: 48%; /* Two items per row on medium screens */
-            }
-        }
         @media (max-width: 768px) {
-            .hotel-item {
-                max-width: 100%; /* One item per row on small screens */
+            .search-bar {
+                flex-direction: column;
             }
-            .search-bar input[type="text"] {
-                width: 100%; /* Make search bar full width */
+            .filter-bar {
+                flex-wrap: wrap;
+            }
+            .hotel-item {
+                width: 100%;
             }
         }
+
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Hotel Booking App</h1>
-    <a href="/loginform" class="profile-login">Login</a> <!-- Change to "Profile" when logged in -->
+    <img src="/image/logo.png" alt="App Logo"> <!-- Logo -->
+    <a href="#" class="profile-login">
+        <img src="/image/user.png" alt="Profile" class="profile-image"> <!-- Profile Image -->
+    </a> <!-- Login/Profile Button -->
 </header>
 
-<div class="container">
+<div class="search-bar">
+    <input type="text" placeholder="Where" />
+    <input type="date" />
+    <input type="date" />
+    <select>
+        <option>Guests</option>
+        <option>1 Guest</option>
+        <option>2 Guests</option>
+        <option>3 Guests</option>
+        <option>4 Guests</option>
+    </select>
+    <a href="#">
+        <img src="/image/search.png" alt="Search" class="search-image"> <!-- Search Image -->
+    </a>
+</div>
 
-    <div class="search-bar">
-        <input type="text" placeholder="Search for hotels..." />
-    </div>
+<!--<div class="filter-bar">-->
+<!--    <div>-->
+<!--        <img src="icons/views.png" alt="Views">-->
+<!--        <p>Amazing Views</p>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <img src="icons/pools.png" alt="Pools">-->
+<!--        <p>Amazing Pools</p>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <img src="icons/farms.png" alt="Farms">-->
+<!--        <p>Farms</p>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <img src="icons/lake.png" alt="Lake">-->
+<!--        <p>Lakefront</p>-->
+<!--    </div>-->
+<!--</div>-->
 
-    <div class="hotel-list">
+<div class="hotel-list">
 
-        <!-- Hotel Item 1 -->
-        <div class="hotel-item">
-            <img src="/image/hotel1.webp" alt="Hotel 1">
-            <div class="hotel-info">
-                <h2>Luxury Resort</h2>
-                <p>Location: Maldives</p>
-                <p class="rating">Rating: ★★★★☆</p>
-            </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
+    <!-- Hotel Item 1 -->
+    <a href="/bookform" class="hotel-item">
+        <img src="/image/hotel1.webp" alt="Hotel 1">
+        <div class="hotel-info">
+            <h2>Luxury Resort</h2>
+            <p>Location: Maldives</p>
+            <p class="rating">Rating: ★★★★☆</p>
+            <p class="price">$400/night</p>
         </div>
+    </a>
 
-        <!-- Hotel Item 2 -->
-        <div class="hotel-item">
-            <img src="/image/hotel2.webp" alt="Hotel 2">
-            <div class="hotel-info">
-                <h2>Mountain Lodge</h2>
-                <p>Location: Swiss Alps</p>
-                <p class="rating">Rating: ★★★★★</p>
-            </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
+    <!-- Hotel Item 2 -->
+    <a href="/bookform" class="hotel-item">
+        <img src="/image/hotel2.webp" alt="Hotel 2">
+        <div class="hotel-info">
+            <h2>Mountain Lodge</h2>
+            <p>Location: Swiss Alps</p>
+            <p class="rating">Rating: ★★★★★</p>
+            <p class="price">$350/night</p>
         </div>
+    </a>
 
-        <!-- Hotel Item 3 -->
-        <div class="hotel-item">
-            <img src="/image/hotel8.png" alt="Hotel 3">
+    <!-- Hotel Item 3 -->
+    <a href="/bookform" class="hotel-item">
+        <img src="/image/hotel3.webp" alt="Hotel 3">
+        <div class="hotel-info">
+            <h2>City Hotel</h2>
+            <p>Location: New York City</p>
+            <p class="rating">Rating: ★★★☆☆</p>
+            <p class="price">$200/night</p>
+        </div>
+    </a>
+
+    <!-- Additional Hotel Items -->
+    <a href="/bookform" class="hotel-item">
+        <img src="/image/hotel4.webp" alt="Hotel 4">
+        <div class="hotel-info">
+            <h2>City Hotel</h2>
+            <p>Location: New York City</p>
+            <p class="rating">Rating: ★★★☆☆</p>
+            <p class="price">$200/night</p>
+        </div>
+    </a>
+
+    <a href="/bookform" class="hotel-item">
+        <img src="/image/hotel5.webp" alt="Hotel 5">
+        <div class="hotel-info">
+            <h2>City Hotel</h2>
+            <p>Location: New York City</p>
+            <p class="rating">Rating: ★★★☆☆</p>
+            <p class="price">$200/night</p>
+        </div>
+    </a>
+
+    <a href="/bookform" class="hotel-item">
+        <img src="/image/hotel6.webp" alt="Hotel 6">
+        <div class="hotel-info">
+            <h2>City Hotel</h2>
+            <p>Location: New York City</p>
+            <p class="rating">Rating: ★★★☆☆</p>
+            <p class="price">$200/night</p>
+        </div>
+    </a>
+    <a href="/bookform" class="hotel-item">
+        <img src="/image/hotel7.webp" alt="Hotel 6">
+        <div class="hotel-info">
+            <h2>City Hotel</h2>
+            <p>Location: New York City</p>
+            <p class="rating">Rating: ★★★☆☆</p>
+            <p class="price">$200/night</p>
+        </div>
+        <a href="/bookform" class="hotel-item">
+            <img src="/image/hotel8.png" alt="Hotel 6">
             <div class="hotel-info">
                 <h2>City Hotel</h2>
                 <p>Location: New York City</p>
                 <p class="rating">Rating: ★★★☆☆</p>
+                <p class="price">$200/night</p>
             </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
-        </div>
-
-        <!-- Hotel Item 4 -->
-        <div class="hotel-item">
-            <img src="/image/hotel4.webp" alt="Hotel 4">
+        </a>
+        <a href="/bookform" class="hotel-item">
+            <img src="/image/hotel9.png" alt="Hotel 6">
             <div class="hotel-info">
                 <h2>City Hotel</h2>
                 <p>Location: New York City</p>
                 <p class="rating">Rating: ★★★☆☆</p>
+                <p class="price">$200/night</p>
             </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
-        </div>
-
-        <!-- Hotel Item 5 -->
-        <div class="hotel-item">
-            <img src="/image/hotel9.png" alt="Hotel 5">
+        </a>
+        <a href="/bookform" class="hotel-item">
+            <img src="/image/hotel10.webp" alt="Hotel 6">
             <div class="hotel-info">
                 <h2>City Hotel</h2>
                 <p>Location: New York City</p>
                 <p class="rating">Rating: ★★★☆☆</p>
+                <p class="price">$200/night</p>
             </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
-        </div>
-
-        <!-- Hotel Item 6 -->
-        <div class="hotel-item">
-            <img src="/image/hotel13.webp" alt="Hotel 6">
-            <div class="hotel-info">
-                <h2>City Hotel</h2>
-                <p>Location: New York City</p>
-                <p class="rating">Rating: ★★★☆☆</p>
-            </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
-        </div>
-
-        <!-- Hotel Item 7 -->
-        <div class="hotel-item">
-            <img src="/image/hotel11.webp" alt="Hotel 6">
-            <div class="hotel-info">
-                <h2>City Hotel</h2>
-                <p>Location: New York City</p>
-                <p class="rating">Rating: ★★★☆☆</p>
-            </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
-        </div>
-
-        <!-- Hotel Item 8 -->
-        <div class="hotel-item">
-            <img src="/image/hotel5.webp" alt="Hotel 6">
-            <div class="hotel-info">
-                <h2>City Hotel</h2>
-                <p>Location: New York City</p>
-                <p class="rating">Rating: ★★★☆☆</p>
-            </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
-        </div>
-
-        <!-- Hotel Item 9 -->
-        <div class="hotel-item">
-            <img src="/image/hotel12.webp" alt="Hotel 6">
-            <div class="hotel-info">
-                <h2>City Hotel</h2>
-                <p>Location: New York City</p>
-                <p class="rating">Rating: ★★★☆☆</p>
-            </div>
-            <button class="book-button" onclick="window.location.href='/bookform'">Book Now</button>
-        </div>
+            <a href="/bookform" class="hotel-item">
+                <img src="/image/hotel11.webp" alt="Hotel 6">
+                <div class="hotel-info">
+                    <h2>City Hotel</h2>
+                    <p>Location: New York City</p>
+                    <p class="rating">Rating: ★★★☆☆</p>
+                    <p class="price">$200/night</p>
+                </div>
+            </a>
+            <a href="/bookform" class="hotel-item">
+                <img src="/image/hotel12.webp" alt="Hotel 6">
+                <div class="hotel-info">
+                    <h2>City Hotel</h2>
+                    <p>Location: New York City</p>
+                    <p class="rating">Rating: ★★★☆☆</p>
+                    <p class="price">$200/night</p>
+                </div>
+            </a>
+        </a>
+    </a>
 
 
-
-    </div>
 </div>
 
 </body>

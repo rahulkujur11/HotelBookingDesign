@@ -1,27 +1,39 @@
 package com.project.hotelbooking.Models;
 
+import jakarta.persistence.*;
 import java.util.List;
 
+@Entity
 public class Hotel {
-    private String hotelId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // For auto-increment primary key
+    private Long hotelId; // Changed from String to Long to support auto-increment
+
     private String name;
     private String location;
+
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL) // A hotel can have many rooms
     private List<Room> rooms;
+
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL) // A hotel can have many reviews
     private List<Review> reviews;
 
-    public Hotel(String hotelId, String name, String location, List<Room> rooms, List<Review> reviews) {
-        this.hotelId = hotelId;
+    // Constructors, getters, and setters
+    public Hotel() {}
+
+    public Hotel(String name, String location) {
         this.name = name;
         this.location = location;
-        this.rooms = rooms;
-        this.reviews = reviews;
     }
 
-    public String getHotelId() {
+    // Getters and setters...
+
+    public Long getHotelId() {
         return hotelId;
     }
 
-    public void setHotelId(String hotelId) {
+    public void setHotelId(Long hotelId) {
         this.hotelId = hotelId;
     }
 

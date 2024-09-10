@@ -1,6 +1,5 @@
 package com.project.hotelbooking.Services;
 
-import com.project.hotelbooking.Models.User;
 import com.project.hotelbooking.Notifications.Observable;
 import com.project.hotelbooking.Notifications.Observer;
 import com.project.hotelbooking.Payment.PaymentStrategy;

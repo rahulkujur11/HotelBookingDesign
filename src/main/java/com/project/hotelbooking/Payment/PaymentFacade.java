@@ -25,4 +25,20 @@ public class PaymentFacade {
 
         return paymentSuccess;
     }
+
+    public PaymentService getPaymentService() {
+        return paymentService;
+    }
+
+    public void setPaymentService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
+
+    public NotificationService getNotificationService() {
+        return notificationService;
+    }
+
+    public void setNotificationService(NotificationService notificationService) {
+        this.notificationService = notificationService;
+    }
 }

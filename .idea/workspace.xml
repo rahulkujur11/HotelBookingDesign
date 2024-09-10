@@ -5,10 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a3f4af6-d8e1-490e-babf-a50e7d64031a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Controllers/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Controllers/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Controllers/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/HotelBookingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/HotelBookingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/HotelBookingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/HotelBookingSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Payment/PaymentFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Payment/PaymentFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Repository/BookingRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Services/BookingRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Repository/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Services/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Services/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Services/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Services/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Services/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hotelbooking/Services/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Controllers/PaymentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/HotelBookingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/HotelBookingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/HotelbookingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/HotelbookingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Hotel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PaymentFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Payment/PaymentFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Repository/BookingRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Repository/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/BookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/NotificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/NotificationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/hotelbooking/Services/PaymentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/loginform.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +60,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -56,7 +99,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/B Projects/HotelBookingDesign",
+    "last_opened_file_path": "D:/B Projects/HotelBookingDesign/src/main/resources/static/image",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,13 +108,14 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "spring.configuration.checksum": "66dcd17246278ac88007d124a9338187",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\B Projects\HotelBookingDesign\src\main\resources\static\image" />
       <recent name="D:\Study Material\hotelbooking\src\main\resources\static\image" />
       <recent name="D:\Study Material\hotelbooking" />
       <recent name="D:\Study Material\hotelbooking\src" />
@@ -81,7 +125,10 @@
       <recent name="D:\Study Material\hotelbooking\src\main\resources\static\image" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.HotelBookingApplication">
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
     <configuration name="HotelBookingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-22" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -91,6 +138,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.All in generated-requests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,11 +172,31 @@
       <workItem from="1723621236208" duration="1280000" />
       <workItem from="1723815725079" duration="461000" />
       <workItem from="1724585973270" duration="8137000" />
-      <workItem from="1724600285528" duration="1028000" />
+      <workItem from="1724600285528" duration="1584000" />
+      <workItem from="1724609149439" duration="2678000" />
+      <workItem from="1725290126227" duration="63000" />
+      <workItem from="1725906254498" duration="2353000" />
+      <workItem from="1725909443606" duration="3796000" />
+      <workItem from="1725913271497" duration="3665000" />
+      <workItem from="1725917535825" duration="2449000" />
+      <workItem from="1725920307528" duration="755000" />
+      <workItem from="1725921395858" duration="497000" />
+      <workItem from="1725922000058" duration="37815000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

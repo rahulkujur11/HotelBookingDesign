@@ -1,7 +1,7 @@
 package com.project.hotelbooking.Controllers;
 
 import com.project.hotelbooking.Payment.PaymentFacade;
-import com.project.hotelbooking.Repository.BookingRequest;
+import com.project.hotelbooking.Services.BookingRequest;
 import com.project.hotelbooking.Services.BookingService;
 import com.project.hotelbooking.Services.NotificationService;
 import com.project.hotelbooking.Services.PaymentService;
@@ -17,16 +17,12 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class PaymentController {
 
-    @Autowired
     private BookingService bookingService;
 
-    @Autowired
     private PaymentFacade paymentFacade;
 
-    @Autowired
     private PaymentService paymentService;
 
-    @Autowired
     private NotificationService notificationService;
 
     @GetMapping("/payment")

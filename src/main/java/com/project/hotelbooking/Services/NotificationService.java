@@ -1,7 +1,5 @@
 package com.project.hotelbooking.Services;
 
-import com.project.hotelbooking.Models.Booking;
-import com.project.hotelbooking.Models.User;
 import com.project.hotelbooking.Notifications.Observer;
 import org.springframework.stereotype.Service;
 

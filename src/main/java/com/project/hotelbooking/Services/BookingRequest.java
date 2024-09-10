@@ -1,6 +1,10 @@
-package com.project.hotelbooking.Repository;
+package com.project.hotelbooking.Services;
 
 public class BookingRequest {
+
+    private Long userId; // To fetch the user
+    private Long hotelId; // To fetch the hotel
+    private Long roomId; // To fetch the room
     private String userName;
     private String email;
     private String hotelName;
@@ -9,6 +13,30 @@ public class BookingRequest {
     private String paymentType;
 
     // Getters and Setters
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Long getHotelId() {
+        return hotelId;
+    }
+
+    public void setHotelId(Long hotelId) {
+        this.hotelId = hotelId;
+    }
+
+    public Long getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(Long roomId) {
+        this.roomId = roomId;
+    }
 
     public String getUserName() {
         return userName;
@@ -52,7 +80,6 @@ public class BookingRequest {
 
     public String getPaymentType() {
         return paymentType;
-
     }
 
     public void setPaymentType(String paymentType) {
@@ -60,7 +87,6 @@ public class BookingRequest {
     }
 
     public double getAmount() {
-        return 500;
+        return 500; // Static amount for now, you may want to calculate this based on the room and hotel
     }
 }
-
